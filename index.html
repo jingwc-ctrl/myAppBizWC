@@ -4,10 +4,42 @@
     <base target="_top">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>myAppBizWC</title>
+    <style>
+        /* ลบขอบขาวเริ่มต้นของ Browser ออกให้หมด */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* ป้องกันการเกิดสกอร์บาร์ซ้อนกัน 2 ชั้น */
+            background-color: #f8f9fa; /* สีพื้นหลังระหว่างรอโหลด */
+        }
+
+        /* ตั้งค่า iframe ให้เต็มหน้าจอเป๊ะ */
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <iframe style="width: 100%; height: 100vh;" scrolling="yes" src="https://script.google.com/macros/s/AKfycbxbkO_7GMFr9rN27cc7LGJ9yRs_JND9floKb74YM-036BZXhkRtfH0QqlpTYxLeADJEZA/exec" frameborder="0"></iframe>
+
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbxbkO_7GMFr9rN27cc7LGJ9yRs_JND9floKb74YM-036BZXhkRtfH0QqlpTYxLeADJEZA/exec" 
+        allow="geolocation; microphone; camera" 
+        scrolling="yes">
+    </iframe>
+
 </body>
 </html>
